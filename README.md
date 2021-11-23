@@ -1,29 +1,12 @@
-# Next.js + Tailwind CSS Example
+# sebgram
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Error: A server error occurs when attempting to sign in as of 23/11/2021
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+This website is deployed using vercel: https://sebgram.vercel.app/
 
-## Preview
+This project is a social media website for making posts. It is based on Instagram. The project uses the React library with the Next.js framework. Tailwind CSS is used to style the application. Firebase is used for authentication and database storage. Recoil is used for state manegement. NextAuth is used for authentication. Heroicons is used for the icons. Faker.js is used to populate the website with random data.
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+• The website is responsive, adapting the page content to various screen sizes using TailwindCSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+The home page looks different depending on whether the user is signed in or not.
+The header contains a logo, an input field, an icon button and a sign-in button. The logo changes depending on screen size.
