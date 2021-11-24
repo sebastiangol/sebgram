@@ -12,17 +12,17 @@ export default NextAuth({
   ],
   pages: {
     signIn: '/auth/signin'
-  },
-  callbacks: {
-    async session({ session, token }) {
-      session?.user?.username = session?.user?.name
-        .split(' ')
-        .join('')
-        .toLocaleLowerCase();
+  }
+  // callbacks: {
+  //   async session({ session, token, user }) {
+  //     session.user.username = session.user.name
+  //       .split(' ')
+  //       .join('')
+  //       .toLocaleLowerCase();
 
-      session?.user?.uid = token.sub;
-      return session;
-    }
-  },
-  session: { jwt: true }
+  //     session.user.uid = token.sub;
+  //     return session;
+  //   }
+  // },
+  // session: { jwt: true }
 });
