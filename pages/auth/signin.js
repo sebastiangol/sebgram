@@ -1,5 +1,9 @@
 import Head from 'next/head';
-import { getProviders, signIn as SignIntoProvider } from 'next-auth/react';
+import {
+  getProviders,
+  getSession,
+  signIn as SignIntoProvider
+} from 'next-auth/react';
 import Header from '../../components/Header';
 
 function signIn({ providers }) {
@@ -34,6 +38,12 @@ function signIn({ providers }) {
 
 export async function getServerSideProps() {
   const providers = await getProviders();
+  const session = await getSession();
+  if (!session) {
+    return {
+      props: { providers }
+    };
+  }
 
   return {
     props: {
