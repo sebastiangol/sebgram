@@ -56,7 +56,7 @@ function Header() {
             data-tip="Home"
             data-for="home"
           />
-
+          <ReactTooltip id="home" place="bottom" type="dark" effect="float" />
           {session ? (
             <>
               {/* <div className="relative navButton">
