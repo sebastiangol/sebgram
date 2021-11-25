@@ -15,18 +15,16 @@ function signIn({ providers }) {
       <div className="flex flex-col items-center mt-40">
         <img className="w-80 -mb-7" src="/logoHeader.png" alt="" />
         <div className="mt-20">
-          {Object.values(providers).map(provider => (
-            <div key={provider.name}>
-              <button
-                className="p-3 bg-blue-500 rounded-lg text-white"
-                onClick={() =>
-                  SignIntoProvider(provider.id, { callbackUrl: '/' })
-                }
-              >
-                Sign in with {provider.name}
-              </button>
-            </div>
-          ))}
+          {/* {Object.values(providers).map(provider => ( */}
+          <div key="Google">
+            <button
+              className="p-3 bg-blue-500 rounded-lg text-white"
+              onClick={() => SignIntoProvider('google', { callbackUrl: '/' })}
+            >
+              Sign in with Google
+            </button>
+          </div>
+          {/* ))} */}
         </div>
       </div>
     </div>
@@ -35,6 +33,12 @@ function signIn({ providers }) {
 
 export async function getServerSideProps() {
   const providers = await getProviders();
+
+  if (!providers) {
+    return {
+      props: {}
+    };
+  }
 
   return {
     props: {
