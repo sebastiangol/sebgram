@@ -1,6 +1,6 @@
 # sebgram
 
-## Error: A server error occurs when attempting to sign in as of 23/11/2021
+#### • There is an issue with the faker.js images which causes the several circular images on the page to take about 15 seconds to load, as of 25/11/2021.
 
 This website is deployed using vercel: https://sebgram.vercel.app/
 
