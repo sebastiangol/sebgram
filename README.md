@@ -36,7 +36,7 @@ Each post has a textfield, so the comment made will be attached to the correspon
 To create a post, the user needs to click the plus-circle icon at the right side of the header. After clicking it, a popup appears:
 ![image](https://user-images.githubusercontent.com/75766182/143494140-80dc2a8a-e9e5-4a71-a3ad-096bd8f80e31.png)
 
-This popup can be closed by clicking on the background. The user can select an image file from their device by clicking the camera icon. A caption can also be added with the text field. The upload-post button will create a post, which will soon appear in the feed.
+The popup's visability is kept track of by using Recoil. The popup's visability is off by default. When the plus-circle icon is clicked, the popup visability's state is set to True, which will trigger the popup screen to appear. When the popup is closed, the popup visibility state will be set to false. This popup can be closed by clicking on the background. The user can select an image file from their device by clicking the camera icon. A caption can also be added with the text field. The upload-post button will create a post, which will soon appear in the feed.
 
 To log out of the google account, the user can either click on the Sign Out text-button in the profile section, or click on the user's image in the header.
 
