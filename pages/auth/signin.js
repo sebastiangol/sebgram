@@ -11,6 +11,7 @@ function signIn({ providers }) {
       </Head>
 
       <Header />
+      {console.log(providers)}
       <div className="flex flex-col items-center mt-40">
         <img className="w-80 -mb-7" src="/logoHeader.png" alt="" />
         <div className="mt-20">
