@@ -1,17 +1,56 @@
 import { useEffect, useState } from 'react';
-import faker from 'faker';
+// import faker from 'faker';
 
 function Suggestions() {
-  const [suggestions, setSuggestions] = useState([]);
+  const suggestions = [
+    {
+      id: 0,
+      avatar:
+        'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg',
+      username: 'Shanel_Rolfson',
+      company: 'Raynor LLC'
+    },
+    {
+      id: 1,
+      avatar:
+        'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg',
+      username: 'Kip_Wilkinson47',
+      company: 'Schamberger - Schumm'
+    },
+    {
+      id: 2,
+      avatar:
+        'https://images.pexels.com/photos/1918290/pexels-photo-1918290.jpeg',
+      username: 'Lempi_Borer67',
+      company: 'Emard, Goldner and Zieme'
+    },
+    {
+      id: 3,
+      avatar:
+        'https://images.pexels.com/photos/38289/portrait-photography-profile-face-one-38289.jpeg',
+      username: 'Nyasia.Bogisich52',
+      company: 'Lemke and Sons'
+    },
+    {
+      id: 4,
+      avatar:
+        'https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg',
+      username: 'Kayla_Schimmel41',
+      company: 'Gibson - Rowe'
+    }
+  ];
 
-  useEffect(() => {
-    const suggestions = [...Array(5)].map((_, i) => ({
-      ...faker.helpers.contextualCard(),
-      id: i
-    }));
+  // const [suggestions, setSuggestions] = useState([]);
 
-    setSuggestions(suggestions);
-  }, []);
+  // useEffect(() => {
+  // const suggestions = [...Array(5)].map((_, i) => ({
+  //   ...faker.helpers.contextualCard(),
+  //   id: i
+  // }));
+
+  // setSuggestions(suggestions);
+  // console.log(suggestions);
+  // }, []);
 
   return (
     <div className="mt-4 ml-10">
@@ -34,7 +73,7 @@ function Suggestions() {
           <div className="flex-1 ml-4">
             <h2 className="font-semibold text-sm">{profile.username}</h2>
             <h3 className="text-xs text-gray-400">
-              Works at {profile.company.name}
+              Works at {profile.company}
             </h3>
           </div>
 
