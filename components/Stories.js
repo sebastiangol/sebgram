@@ -128,8 +128,6 @@ function Stories() {
     }
   ];
 
-  console.log(userProfiles);
-
   // const [suggestions, setSuggestions] = useState([]);
 
   // useEffect(() => {
