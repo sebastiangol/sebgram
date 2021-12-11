@@ -1,10 +1,9 @@
 # sebgram
 
-#### • There is a network issue with the Faker.js images which causes the several circular images on the page to take about 15 seconds to load, as of 25/11/2021.
-
 This website is deployed using vercel: https://sebgram.vercel.app/
 
 This project is a social media website for making posts. It is based on Instagram. The project uses the React library with the Next.js framework. Tailwind CSS is used to style the application. Firebase is used for authentication and data storage, specifically for storing posts, comments and likes. Recoil is used for state manegement. NextAuth is used for authentication. Heroicons is used for the icons. Faker.js is used to populate the website with random data.
+#### • Due to network issues with their images, Faker.js is no longer being used. Artificial user profile objects have been hardcoded into the application.
 
 The page looks different depending on whether the user is signed in or not.
 
@@ -21,9 +20,9 @@ The header contains a logo, an input field, a home icon button and a sign-in but
 When clicking on the sign-in button, a sign-in page is displayed:
 ![image](https://user-images.githubusercontent.com/75766182/143489594-f27a778b-30c8-4870-962d-c0296dea7b33.png)
 
-The sign-in-with-google button brings the user to a google authentication page, where you can sign in with a google account. After signing in, the user is brought back to the home page. The profile picture and first/last name of the logged-in google account are used on the page: the image in the stories section, and the name/image in the profile section on the right. The first and last name are combined into one username, which is then lowercased. The image and username will also be used if the user makes a post or a comment.
+The sign-in-with-google button brings the user to a google authentication page, where you can sign in with a google account. After signing in, the user is brought back to the home page. The profile picture and first/last name of the logged-in google account are used on the page: the image in the stories section, and the name/image in the profile section on the right. The first and last name are combined into one username, which is then lowercased. The image and username will also be used if the user makes a post or a comment. Below the profile are 5 suggestions of profiles. The username, image and work company are hardcoded.
 
-The main feed area has a stories section and a posts section. The stories section contains 20 stories represented by a circular image and name. The image and name are randomly generated using Faker.js. The section can be scrolled horizontally.
+The main feed area has a stories section and a posts section. The stories section contains 20 stories represented by a circular image and name. The images and names are hardcoded. The section can be scrolled horizontally.
 
 The post section displays posts. Posts are stored in a firestore database. Posts contain the username of the poster, an image, a like counter, a caption and comments. When a user is signed in, the post additionally contains buttons including a like button, and a textfield/button for making a comment on the post.
 #### Post when Signed out:
@@ -36,7 +35,7 @@ Each post has a textfield, so the comment made will be attached to the correspon
 To create a post, the user needs to click the plus-circle icon at the right side of the header. After clicking it, a popup appears:
 ![image](https://user-images.githubusercontent.com/75766182/143494140-80dc2a8a-e9e5-4a71-a3ad-096bd8f80e31.png)
 
-This popup can be closed by clicking on the background. The user can select an image file from their device by clicking the camera icon. A caption can also be added with the text field. The upload-post button will create a post, which will soon appear in the feed.
+The popup's visability is kept track of by using Recoil. The popup's visability is off by default. When the plus-circle icon is clicked, the popup visability's state is set to True, which will trigger the popup screen to appear. When the popup is closed, the popup visibility state will be set to false. This popup can be closed by clicking on the background. The user can select an image file from their device by clicking the camera icon. A caption can also be added with the text field. The upload-post button will create a post, which will soon appear in the feed.
 
 To log out of the google account, the user can either click on the Sign Out text-button in the profile section, or click on the user's image in the header.
 
